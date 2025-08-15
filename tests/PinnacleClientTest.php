@@ -5,8 +5,9 @@ namespace Armandsar\PinnaclePineapple\Test;
 use Armandsar\PinnaclePineapple\PinnacleClient;
 use GuzzleHttp\Client;
 use Illuminate\Contracts\Config\Repository;
+use PHPUnit\Framework\TestCase;
 
-class PinnacleClientTest extends \PHPUnit_Framework_TestCase
+class PinnacleClientTest extends TestCase
 {
     /**
      * @test
@@ -59,7 +60,7 @@ class PinnacleClientTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $fixtures);
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         \Mockery::close();
     }
